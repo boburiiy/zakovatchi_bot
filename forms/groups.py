@@ -10,7 +10,3 @@ class group:
 
     def __str__(self) -> str:
         return f"{self.name} jamoasi!!!"
-
-
-
-tritium = group("tritium")

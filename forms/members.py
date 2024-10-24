@@ -17,8 +17,3 @@ Sinfi:{self.grade}
 Qiziqishlari:{", ".join(self.interests)}
 {self.plays_in} a`zosi"""
         return output
-
-
-newmmbr = members("Bobur Kimdirov", 2009, ["IT", "box"], 7, tritium)
-
-print(newmmbr)
