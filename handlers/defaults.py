@@ -1,9 +1,10 @@
 from libs.libs import *
-
-
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-    await message.answer(f"Hello, {(message.from_user.full_name)}!")
+    safe_name = html_escape(message.from_user.full_name)
+    user_id = message.from_user.id
+    link = f'<a href="tg://user?id={user_id}">{safe_name}</a>'
+    await message.answer(f"Hello, {link}!", parse_mode="HTML")
 
 
 @dp.message(lambda message: message.text.startswith("#savol"))
